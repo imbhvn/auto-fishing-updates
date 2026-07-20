@@ -1,5 +1,5 @@
 {
-  "version": "1.6.0",
+  "version": "1.6.1",
   "url": "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.exe",
-  "notes": "UI complet refacut cu sidebar si carduri moderne, preview live separat pentru cifra si chat, profile independente per caracter, Istoric si Yang/ora, Discord stabil per profil, chat exclusiv PP-OCRv6 si updater atomic fara CMD."
+  "notes": "UI stabil si finisat: padding uniform, carduri rotunjite fara chenarul taburilor, header compact cu iconite, navigatie cu iconite si stergere intrari invalide din Preturi. Preview-urile sunt asincrone, resize-ul si evenimentele live nu mai deplaseaza controalele. PP-OCRv6 porneste lazy si nu mai adauga pauza de polling dupa inferenta, pastrand scalarea 2x pentru precizie. Aceeasi runda contorizeaza acum pestele plus recompensele distincte de tip «Ai primit»."
 }
