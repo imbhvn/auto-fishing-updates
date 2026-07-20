@@ -1,5 +1,5 @@
 {
-  "version": "1.6.1",
+  "version": "1.6.5",
   "url": "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.exe",
-  "notes": "UI stabil si finisat: padding uniform, carduri rotunjite fara chenarul taburilor, header compact cu iconite, navigatie cu iconite si stergere intrari invalide din Preturi. Preview-urile sunt asincrone, resize-ul si evenimentele live nu mai deplaseaza controalele. PP-OCRv6 porneste lazy si nu mai adauga pauza de polling dupa inferenta, pastrand scalarea 2x pentru precizie. Aceeasi runda contorizeaza acum pestele plus recompensele distincte de tip «Ai primit»."
+  "notes": "Detectorul cifrei restaureaza algoritmul grayscale functional din 1.6.0 si il combina cu masca rapida de culoare. Toate cele 54 de sabloane reale sunt recunoscute, iar simbolul neutru comun este respins prin diferenta dintre clase. PP-OCRv6 foloseste modele persistente externe, doua fire CPU si OCR adaptiv numai cand jurnalul se schimba; preview-ul si coada UI au cadenta redusa fara impact asupra botului."
 }
