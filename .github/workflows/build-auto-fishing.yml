@@ -1,0 +1,86 @@
+name: Build & Release AutoFishing
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/build-auto-fishing.yml
+
+permissions:
+  contents: write
+
+concurrency:
+  group: auto-fishing-public-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: windows-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout private source
+        uses: actions/checkout@v4
+        with:
+          repository: imbhvn/auto-fishing-bot
+          ref: main
+          token: ${{ secrets.RELEASE_TOKEN }}
+          persist-credentials: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: python -m pip install --upgrade pip pyinstaller && python -m pip install -r requirements.txt
+
+      - name: Run regression tests
+        run: python -m unittest -v test_auto_fishing.py
+
+      - name: Build single Windows executable
+        run: python -m PyInstaller --noconfirm --clean --onefile --noconsole --name AutoFishing --collect-all paddleocr --collect-all paddlex --collect-all paddle --collect-all rapidfuzz auto_fishing_app.py
+
+      - name: Verify executable
+        shell: pwsh
+        run: |
+          $exe = Get-Item "dist\AutoFishing.exe"
+          if ($exe.Length -lt 1000000) { throw "Executabil neasteptat de mic" }
+          $head = [System.IO.File]::ReadAllBytes($exe.FullName)[0..1]
+          if ($head[0] -ne 0x4D -or $head[1] -ne 0x5A) { throw "Executabil Windows invalid" }
+          $exe | Format-List Name,Length,LastWriteTime
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: AutoFishing-1.5.0
+          path: dist/AutoFishing.exe
+          if-no-files-found: error
+          retention-days: 7
+          compression-level: 0
+
+      - name: Publish versioned public release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $version = (Get-Content "version.json" -Raw | ConvertFrom-Json).version
+          $tag = "v$version"
+          $title = "AutoFishing $tag"
+          $notes = "OCR dual Tesseract + PP-OCRv6, contorizare exact-once si tab Preturi. Sursa privata: $env:GITHUB_SHA"
+          gh release view $tag -R imbhvn/auto-fishing-updates *> $null
+          if ($LASTEXITCODE -eq 0) {
+            gh release upload $tag "dist\AutoFishing.exe" --clobber -R imbhvn/auto-fishing-updates
+            gh release edit $tag -R imbhvn/auto-fishing-updates --title $title --notes $notes --latest
+          } else {
+            gh release create $tag "dist\AutoFishing.exe" -R imbhvn/auto-fishing-updates --title $title --notes $notes --latest
+          }
+
+      - name: Publish version.json
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $raw = Get-Content "version.json" -Raw
+          $encoded = [Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes($raw))
+          $sha = gh api repos/imbhvn/auto-fishing-updates/contents/version.json --jq .sha
+          gh api --method PUT repos/imbhvn/auto-fishing-updates/contents/version.json -f message="AutoFishing 1.5.0" -f content=$encoded -f sha=$sha -f branch=main
