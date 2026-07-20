@@ -35,11 +35,17 @@ jobs:
       - name: Install dependencies
         run: python -m pip install --upgrade pip pyinstaller && python -m pip install -r requirements.txt
 
+      - name: Prepare bundled PP-OCRv6 tiny models
+        env:
+          PADDLE_PDX_MODEL_SOURCE: bos
+          PADDLE_PDX_DISABLE_MODEL_SOURCE_CHECK: "True"
+        run: python -c "import auto_fishing_app as app; assert app._ensure_paddle() is not None, app._paddle['error']"
+
       - name: Run regression tests
         run: python -m unittest -v test_auto_fishing.py
 
       - name: Build single Windows executable
-        run: python -m PyInstaller --noconfirm --clean --onefile --noconsole --name AutoFishing --collect-all paddleocr --collect-all paddlex --collect-all paddle --collect-all rapidfuzz --copy-metadata paddlex --copy-metadata imagesize --copy-metadata opencv-contrib-python --copy-metadata pyclipper --copy-metadata pypdfium2 --copy-metadata python-bidi --copy-metadata shapely auto_fishing_app.py
+        run: python -m PyInstaller --noconfirm --clean --onefile --noconsole --name AutoFishing --collect-all paddleocr --collect-all paddlex --collect-all paddle --collect-all rapidfuzz --copy-metadata paddlex --copy-metadata imagesize --copy-metadata opencv-contrib-python --copy-metadata pyclipper --copy-metadata pypdfium2 --copy-metadata python-bidi --copy-metadata shapely --add-data "$env:USERPROFILE\.paddlex\official_models\PP-OCRv6_tiny_det;models\PP-OCRv6_tiny_det" --add-data "$env:USERPROFILE\.paddlex\official_models\PP-OCRv6_tiny_rec;models\PP-OCRv6_tiny_rec" auto_fishing_app.py
 
       - name: Verify executable
         shell: pwsh
@@ -55,7 +61,7 @@ jobs:
         run: |
           $result = Join-Path $env:RUNNER_TEMP "ocr-self-test.json"
           $proc = Start-Process "dist\AutoFishing.exe" -ArgumentList "--self-test-ocr=$result" -PassThru
-          if (-not $proc.WaitForExit(300000)) {
+          if (-not $proc.WaitForExit(180000)) {
             Stop-Process -Id $proc.Id -Force
             throw "OCR self-test timed out"
           }
