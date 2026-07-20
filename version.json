@@ -1,5 +1,5 @@
 {
   "version": "1.5.0",
   "url": "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.exe",
-  "notes": "OCR dual live: Tesseract + PP-OCRv6 tiny local, comparatie side-by-side, deduplicare exact-once si parser fuzzy. Tab nou Preturi cu preturi per peste/obiect, includere sau omitere din calculele sesiunii si raport Discord actualizat."
+  "notes": "OCR dual Tesseract + PP-OCRv6 cu comparatie live, parser tolerant si contorizare exact-once. Tab nou Preturi cu pret per peste/obiect, includere/omitere si totaluri Discord."
 }
