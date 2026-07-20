@@ -1,5 +1,5 @@
 {
-  "version": "1.5.1",
+  "version": "1.6.0",
   "url": "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.exe",
-  "notes": "Fix pentru dependentele PP-OCRv6 din executabil si pentru OneDNN pe Windows CPU. OCR dual Tesseract + PP-OCRv6 cu comparatie live, parser tolerant, contorizare exact-once si tab Preturi."
+  "notes": "UI complet refacut cu sidebar si carduri moderne, preview live separat pentru cifra si chat, profile independente per caracter, Istoric si Yang/ora, Discord stabil per profil, chat exclusiv PP-OCRv6 si updater atomic fara CMD."
 }
