@@ -1,5 +1,5 @@
 {
-  "version": "1.6.6",
-  "url": "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.exe",
-  "notes": "Hotfix detector: traseul live este restaurat exact din 1.4.0 — captura MSS BGRA, grayscale, GaussianBlur 3x3, toate template-urile scalate 0.70–1.30 si TM_CCOEFF_NORMED cu prag 0.75. Masca de culoare si filtrul class-margin nu mai sunt folosite in bot sau in testul live."
+  "version": "2.2.0",
+  "url": "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
+  "notes": "Migrare directă de la AutoFishing 1.6.6 la AutoFishing Next 2.2.0. Profilele, configurația și template-urile existente sunt păstrate, iar noua versiune este instalată și pornită automat."
 }
