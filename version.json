@@ -1,5 +1,5 @@
 {
-  "version": "2.2.0",
-  "url": "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
-  "notes": "Migrare directă de la AutoFishing 1.6.6 la AutoFishing Next 2.2.0. Profilele, configurația și template-urile existente sunt păstrate, iar noua versiune este instalată și pornită automat."
+    "version":  "2.3.0",
+    "url":  "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
+    "notes":  "Migrare directă de la AutoFishing 1.6.6 la AutoFishing Next 2.3.0. Profilele, configurația și template-urile existente sunt păstrate, iar noua versiune este instalată și pornită automat."
 }
