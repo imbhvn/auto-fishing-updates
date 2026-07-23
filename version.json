@@ -1,5 +1,5 @@
 {
-    "version":  "2.7.0",
+    "version":  "2.8.0",
     "url":  "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
-    "notes":  "Migrare directă de la AutoFishing 1.6.6 la AutoFishing Next 2.7.0. Include PP-OCRv6 pe ONNX Runtime CPU pentru compatibilitate AMD, instalare cu progres și limite anti-blocare, plus auto-update reparat. Profilele, configurația și template-urile existente sunt păstrate, iar noua versiune este instalată și pornită automat."
+    "notes":  "Migrare directă de la AutoFishing 1.6.6 la AutoFishing Next 2.8.0. Include corecția punctelor de undiță, diagnosticele exacte pentru rezultate Necunoscute și exportul statistic sigur. Profilele, configurația și template-urile existente sunt păstrate, iar noua versiune este instalată și pornită automat."
 }
