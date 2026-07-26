@@ -1,5 +1,5 @@
 {
-    "version":  "2.10.2",
+    "version":  "2.10.3",
     "url":  "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
-    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.10.2. Include temporizarile recalibrate pentru undita +8, numararea corecta a capturilor cu diacritice parazite si validarea rezultatelor cu pestele anuntat in carlig, ca punctele de undita sa nu mai fie atribuite gresit. Profilele, configuratia si template-urile existente sunt pastrate."
+    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.10.3. Include temporizarile recalibrate pentru undita +8, numararea corecta a capturilor cu diacritice si validarea tuturor capturilor principale cu pestele anuntat in carlig, ca punctele de undita sa corespunda exact jocului. Profilele, configuratia si template-urile existente sunt pastrate."
 }
