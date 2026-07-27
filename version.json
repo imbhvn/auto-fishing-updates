@@ -1,5 +1,5 @@
 {
-    "version":  "2.11.3",
+    "version":  "2.11.4",
     "url":  "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
-    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.3. Include validarea pozitionala a pierderilor (mesajele Ghinion vechi nu mai fura rezolvarea rundei si punctele capturilor reale), recunoasterea mesajelor Castig dublu si a carligului lipit de OCR. Profilele, configuratia si template-urile existente sunt pastrate."
+    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.4. Include corectia confirmata in joc: Castig dublu acorda un singur punct de undita pe runda, nu doua, iar cantitatea x2 ramane doar la numarul de pesti din inventar. Pastreaza validarea pozitionala a capturilor si a pierderilor si recunoasterea carligului lipit de OCR. Profilele, configuratia si template-urile existente sunt pastrate."
 }
