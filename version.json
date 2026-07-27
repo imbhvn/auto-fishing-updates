@@ -1,5 +1,5 @@
 {
-    "version":  "2.11.1",
+    "version":  "2.11.2",
     "url":  "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
-    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.1. Momeala nu se mai pune de doua ori si nu se mai pierd 2.5-5 secunde pe runda: confirmarea momelii se citeste pozitional din coada ciclului (linia identica \"Ai ales Rama ca momeala\" nu trecea de filtrul de noutate), iar reapasarea ramane doar cand apasarea chiar s-a pierdut - rundele pornesc vizibil mai repede. Profilele, configuratia si template-urile existente sunt pastrate."
+    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.2. Mesajul de carlig se recunoaste acum si cand OCR lipeste cuvintele (\"Se pareca esteun/o\", \"Separe caeste\", \"Pastrav de rauin carlig\", \"incarlig\"), iar capturile repetate se atribuie rundei si cand pestele din carlig nu a putut fi citit - dupa pozitia de cel mai nou mesaj din coada ancorata in momeala. Rezultatul: mai putine runde Necunoscut si mai putine puncte de undita pierdute. Profilele, configuratia si template-urile existente sunt pastrate."
 }
