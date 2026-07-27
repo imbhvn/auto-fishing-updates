@@ -1,5 +1,5 @@
 {
-    "version":  "2.11.0",
+    "version":  "2.11.1",
     "url":  "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
-    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.0. Include recunoasterea mesajelor Castig dublu cu puncte de undita egale cu cantitatea, validarea obiectelor pescuite ca pestii si re-momirea imediata la Nu ai momeala, fara asteptari moarte. Profilele, configuratia si template-urile existente sunt pastrate."
+    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.1. Momeala nu se mai pune de doua ori si nu se mai pierd 2.5-5 secunde pe runda: confirmarea momelii se citeste pozitional din coada ciclului (linia identica \"Ai ales Rama ca momeala\" nu trecea de filtrul de noutate), iar reapasarea ramane doar cand apasarea chiar s-a pierdut - rundele pornesc vizibil mai repede. Profilele, configuratia si template-urile existente sunt pastrate."
 }
