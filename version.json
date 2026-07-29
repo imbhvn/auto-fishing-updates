@@ -1,5 +1,5 @@
 {
-    "version":  "2.11.4",
+    "version":  "2.11.5",
     "url":  "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
-    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.4. Include corectia confirmata in joc: Castig dublu acorda un singur punct de undita pe runda, nu doua, iar cantitatea x2 ramane doar la numarul de pesti din inventar. Pastreaza validarea pozitionala a capturilor si a pierderilor si recunoasterea carligului lipit de OCR. Profilele, configuratia si template-urile existente sunt pastrate."
+    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.5. La unditele sub +7, mesajul \"un peste care poate fi prins doar cu un nivel mai mare al unditei\" inchide acum runda in 1-2 cadre OCR in loc sa astepte 30 de secunde timeout-ul cifrei, iar confirmarea momelii nu mai este blocata de acest mesaj - dispare punerea dubla a momelii (Rama inlocuita cu Rama) si pauzele lungi dintre cicluri. Profilele, configuratia si template-urile existente sunt pastrate."
 }
