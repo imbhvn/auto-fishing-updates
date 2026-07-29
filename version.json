@@ -1,5 +1,5 @@
 {
-    "version":  "2.11.10",
+    "version":  "2.11.11",
     "url":  "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
-    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.10. Corectie - rama se echipeaza instant, intarzierea dintre momeala si aruncare din 2.11.9 a fost scoasa (rundele redevin rapide). Pauza dinaintea momelii se masoara acum de la mesajul de rezultat al rundei precedente, referinta corecta - apasarea tastei 1 prea devreme cadea in ciclul vechi si dadea \"Nu ai momeala pe carlig\". Profil focusat 2,6-3,2 s de la rezultat la momeala, fara nicio pauza aditiva sau constanta, cu ezitari rare mai lungi pastrate. Profilele, configuratia si template-urile existente sunt pastrate."
+    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.11.11. Jurnal de debugging per runda in Control bot si in exportul JSON al analizei (cifra recunoscuta cu scor, momentele exacte ale apasarilor, prima apasare planificata fata de cea reala, rezultatul OCR cu motiv si latenta lui) - poate fi trimis direct spre analiza. Referinta primei apasari este acum primul cadru fara animatie, nu al patrulea: se recupereaza ~3 cadre de latenta a detectorului (~300 ms la 106 ms/cadru), principala cauza ramasa a mesajului \"Timp de asteptare prea lung\". Profilele, configuratia si template-urile existente sunt pastrate."
 }
