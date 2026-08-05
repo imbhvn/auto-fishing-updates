@@ -1,5 +1,5 @@
 {
-    "version":  "2.12.1",
+    "version":  "2.12.2",
     "url":  "https://github.com/imbhvn/auto-fishing-updates/releases/latest/download/AutoFishing.LegacyMigrator.exe",
-    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.12.1. Hotfix: verificarea introdusa in 2.12.0 pentru confirmarea momelii bloca permanent confirmarea (linia de momeala ramane vizibila in chat, deci nu putea fi recunoscuta ca noua), iar botul reintra la nesfarsit in ciclu si consuma momeala. Verificarea a fost scoasa, s-a adaugat o siguranta care arunca oricum dupa doua reluari consecutive fara confirmare, iar mesajul \"Momeala ta a fost inlocuita\" are acum semnatura proprie si serveste ca a doua cale de confirmare. Fereastra de burst invatata si restul imbunatatirilor din 2.12.0 raman. Profilele, configuratia si template-urile existente sunt pastrate."
+    "notes":  "Migrare directa de la AutoFishing 1.6.6 la AutoFishing Next 2.12.2. Bugetul de burst nu se mai strange automat: masuratorile arata ca mesajul \"Timp de asteptare\" nu depinde de durata secventei (cifra 2 cu burst 716 ms esua in 18% din runde, cifra 3 cu 959 ms doar in 4.5%), iar scurtarea automata taia prima apasare la 410 ms si costa capturi (cifra 2 a scazut la 30% fata de 39% la cifra 1). Bugetul revine la o valoare fixa, mai permisiva (1,15 s), asa ca prima apasare ramane pe fereastra optima invatata de auto-tuner la toate cifrele. Siguranta anti-bucla pentru momeala din 2.12.1 ramane. Profilele, configuratia si template-urile existente sunt pastrate."
 }
